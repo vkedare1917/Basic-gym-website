@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Secular+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('images/gym-bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+nav {
+    background-color: black;
+    padding: 20px 0;
+    font-family: 'Secular One', sans-serif;
+    font-weight: lighter;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    font-weight: bolder;
+    font-size: 1.5em;
+    list-style: none;
+}
+
+nav ul li a {
+    padding: 6px 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+} 
+
+#logo {
+    width: 120px;
+    height: 66px;
+    position: absolute;
+    right: 3px;
+    top: 0px;
+    filter: invert(100%);
+}
+
+.btns {
+    position: absolute;
+    right: 10px;
+    margin: 5px 0;
+}
+
+button {
+    text-transform: uppercase;
+    padding: 15px 18px; 
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 15px;
+}
+
+button:hover {
+    color: #000;
+    background-color: white;
+    transition: 0.3s ease-in;
+    border: 3px solid #000;
+}
+
+h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Luxurious Roman', cursive;
+    color: white;
+    margin-top: 25px;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    margin: 15px 0;
+}
+
+input {
+    padding: 18px 25px;
+    width: 45%;
+    margin: 10px 0;
+    border: 1px solid #000;
+    border-radius: 15px;
+    opacity: 0.3;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+input::placeholder {
+    color: black;
+    font-weight: lighter;
+}
+
+input:hover {
+    opacity: 0.7;
+    transition: 0.3 ease-in-out;
+}
+
+input:focus {
+    border: 5px solid black;
+    opacity: 1;
+}
+
+#submit-btn {
+    background-color: #fff;
+    opacity: 0.9;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 15px 0;
+    width: 35%;
+}
+
+#submit-btn:hover {
+    transition: 0.3s ease-in-out;
+    color: #fff;
+    background-color: #000;
+    opacity: 1;
+    border: 2px solid #fff;
+}
+
+#about {
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid olivedrab;
+    border-radius: 15px;
+    width: 900px;
+    font-family: 'Arvo', serif;
+    height: 500px;
+    color: white;
+    letter-spacing: 2px;
+    background: black;
+    margin-bottom: 50px;
+}
+
+#about:hover {
+    opacity: 0.6;
+    color: rgb(147, 236, 13);
+}
+
+#about h3 {
+    font-size: 1.6em;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+} 
+
+
+#about p {
+    font-size: 1.2em;
+    padding: 12px 15px;
+}
+
+#footer {
+    border: 2px solid white;
+    background-color: #000;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 230px;
+    width: 100%;
+}
+
+.footer-items ul li  {
+    display: inline-block;
+    text-align: center;
+}
+
+.footer-items ul li:hover {
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
+}
+
+.footer-items p {
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+}
+
