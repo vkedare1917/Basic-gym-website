@@ -13,13 +13,14 @@
 }
 
 body {
-    background-image: url("images/plans-bg-image.jpg");
+    background-image: url("plans-bg-image.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 
 nav {
+    position: relative;
     background-color: black;
     padding: 20px 0;
 }
@@ -30,27 +31,26 @@ nav ul {
 
 nav ul li {
     font-weight: bolder;
-    font-size: 1.5em;
+    font-size: 1.2em;
     list-style: none;
 }
 
 nav ul li a {
     padding: 6px 18px;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
+    transition: 0.3s all ease-in;
 }
 
 nav ul li a:hover {
-    color: #000;
-    background-color: #fff;
-    border-radius: 15px;
+    color: rgba(255, 255, 255, 1);
 }
 
 #logo {
     width: 120px;
-    height: 66px;
-    right: 3px;
-    top: 0px;
+    height: 60px;
+    top: 0;
+    right: 0;
     filter: invert(100%);
     position: absolute;
 }
@@ -59,17 +59,15 @@ h1, h2 {
     text-align: center;
     letter-spacing: 3px;
     font-family: 'Pushster', cursive;
-    font-size: 2.6em;
     color: #000;
 }
 
 h2 {
     letter-spacing: 1px;
     color: #000;
-    font-size: 2.1em;
     font-family: 'Bebas Neue', cursive;
     font-weight: bold;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 .container {
@@ -83,11 +81,11 @@ h2 {
 
 #plans {
     font-family: 'Ubuntu', sans-serif;
-    margin-top: 50px;
+    margin-top: 20px;
     text-align: center;
     padding: 15px;
-    min-width: 1300px;
-    min-height: 400px;
+    width: 950px;
+    min-height: 350px;
     background-color: #000;
     color: #fff;
     opacity: 0.7;
@@ -95,20 +93,22 @@ h2 {
 
 #plans tr th {
     font-weight: bolder;
-    font-size: 1.6em;
+    font-size: 1.1em;
     letter-spacing: 2px;
+    color: rgb(10, 169, 248);
+    transition: 0.3s all ease-in;
 } 
 
 #plans tr td{
-    padding: 12px;
+    padding: 4px;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 0.9em;
     letter-spacing: 2px;
+    transition: 0.3s all ease-in;
 }
 
 th:hover, td:hover {
     opacity: 0.3;
-    transition: 0.3s ease-in;
 }
 
 #timings {
@@ -117,32 +117,69 @@ th:hover, td:hover {
     border: 1px solid white;
     border-radius: 25px;
     font-family: 'Libre Baskerville', serif;
-    height: 400px;
-    width: 35%;
+    height: auto;
+    width: 25%;
     text-align: center;
     margin: 35px 0;
     letter-spacing: 1px;
     opacity: 0.6;
     font-weight: bold;
+    transition: 0.3s opacity ease-in;
 }
 
-/* #timings:hover {
-    transition: 0.3s ease-in-out;
-    background-color: rgb(83, 108, 119);
-    color: #000;
-} */
+#timings:hover {
+    opacity: 0.9;
+}
 
 #timings h3 {
-    font-size: 2em;
+    font-size: 1em;
     padding: 15px;
-    text-decoration: underline;
 }
 
 #timings p {
-    font-size: 1.2em;
+    font-size: 0.8em;
     padding: 15px 0;
 }
 
 #timings p:nth-child(even) {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    #plans {
+        width: 85%;
+        font-size: 0.65em;
+    }
+    #timings {
+        font-size: 0.7em;
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    #logo {
+        display: none;
+    }
+
+    nav ul li {
+        font-size: 0.85em;
+    }
+
+    #plans {
+        width: 95%;
+        min-height: 40vh;
+        font-size: 0.65em;
+        padding: 5px;
+    }
+
+    #plans tr td {
+        padding: 8px;
+    }
+
+    #timings {
+        font-size: 0.7em;
+        width: 75%;
+    }
+    
 }

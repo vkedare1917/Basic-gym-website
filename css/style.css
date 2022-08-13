@@ -13,10 +13,11 @@
 }
 
 body {
-    background-image: url('images/gym-bg.jpg');
+    background-image: url('gym-bg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    scroll-behavior: smooth;
 }
 
 nav {
@@ -32,20 +33,19 @@ nav ul {
 
 nav ul li {
     font-weight: bolder;
-    font-size: 1.5em;
+    font-size: 1.2em;
     list-style: none;
 }
 
 nav ul li a {
     padding: 6px 18px;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
+    transition: 0.3s all ease-in;
 }
 
 nav ul li a:hover {
-    color: #000;
-    background-color: #fff;
-    border-radius: 15px;
+    color: rgba(255,255,255,1);
 } 
 
 #logo {
@@ -107,11 +107,14 @@ input {
     color: black;
     font-weight: bold;
     font-size: 1.2em;
+    transition: 0.3s all ease-in;
 }
 
 input::placeholder {
+    font-size: 1rem;
     color: black;
     font-weight: lighter;
+    font-style: italic;
 }
 
 input:hover {
@@ -120,8 +123,10 @@ input:hover {
 }
 
 input:focus {
-    border: 5px solid black;
+    background: white;
+    border: 2px solid black;
     opacity: 1;
+    outline: none;
 }
 
 #submit-btn {
@@ -139,7 +144,8 @@ input:focus {
     color: #fff;
     background-color: #000;
     opacity: 1;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
+    outline: none;
 }
 
 #about {
@@ -147,13 +153,14 @@ input:focus {
     text-align: center;
     border: 2px solid olivedrab;
     border-radius: 15px;
-    width: 900px;
+    width: 650px;
     font-family: 'Arvo', serif;
-    height: 500px;
+    height: auto;
     color: white;
     letter-spacing: 2px;
     background: black;
     margin-bottom: 50px;
+    transition: 0.3s all ease-in;
 }
 
 #about:hover {
@@ -161,21 +168,21 @@ input:focus {
     color: rgb(147, 236, 13);
 }
 
+
 #about h3 {
-    font-size: 1.6em;
+    margin: 8px;
+    font-size: 1.3em;
     letter-spacing: 2px;
     padding-bottom: 5px;
 } 
 
-
 #about p {
-    font-size: 1.2em;
-    padding: 12px 15px;
+    font-size: 1em;
+    padding: 10px 12px;
 }
 
 #footer {
-    border: 2px solid white;
-    background-color: #000;
+    background-color: rgba(0,0,0,0.8);
     border-radius: 5px;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
@@ -185,7 +192,7 @@ input:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 230px;
+    height: auto;
     width: 100%;
 }
 
@@ -203,7 +210,52 @@ input:focus {
     padding: 10px 0;
     color: white;
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1em;
     letter-spacing: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    #join,#call {
+        display: none;
+    }
+
+    #about {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    form h1 {
+        font-size: 1.2em;
+    }
+    #logo {
+        display: none;
+    }
+
+    nav ul li {
+        font-size: 0.8em;
+    }
+
+    input {
+        width: 85%;
+        font-size: 0.95em;
+        text-transform: auto;
+    }
+
+    input::placeholder {
+        font-size: 0.95em;
+    }
+
+    #submit-btn {
+        width: 60%;
+    }
+
+    #about {
+        width: 90%;
+    }
+
+    #about, #footer {
+        font-size: 0.7em;
+    }
 }
 
